@@ -1,0 +1,22 @@
+This is my fork of droopy.
+Most notably, I've added two types of inline image support.
+I did this so that I can run droopy with images as a single file in my ~/bin/
+I use the following entry in my ~/.bash_aliases (or ~/.bashrc)
+
+alias 'droopy.py'='droopy.py -m "O hai there! Please send me your file."'
+
+You can encode your own image with:
+
+$ cat image.png | python -c 'import sys; print sys.stdin.read().encode("base64")' > image.base64
+
+And then paste it into the appropriate part of the droopy executable.
+There are a few sample images in the images/ directory.
+Feel free to send me some better ones!
+
+I forked this because the original author hasn't responded to patch offerings.
+If that's you, feel free to merge my patches.
+In the meantime, contributors can send patches to: droopy@shubin.ca
+
+Happy hacking,
+James
+
